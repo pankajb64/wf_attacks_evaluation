@@ -1,0 +1,5 @@
+#Move monitored pcap files to separate directory
+while read -r line; do ls | grep "$line" | xargs mv -t ../mon_pcap  ; done < ../mon_sites
+
+#Get list of distinct urls in crawls
+ll | tr -s ' ' | cut -d' ' -f9 | cut -d'-' -f2 | cut -d'_' -f1 | sort | uniq > ../sites

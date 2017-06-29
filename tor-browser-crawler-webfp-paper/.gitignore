@@ -1,0 +1,6 @@
+*.pyc
+tbb/
+results/
+.project
+.pydevproject
+__pycache__
