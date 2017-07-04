@@ -15,19 +15,25 @@ source = []
 length = []
 for line in lines:
     ar = line.split(" ")
-    i = int(ar[0])
-    s = ar[1]
-    l = int(ar[2])
+    i = 0
+    s = ""
+    l = 0
+    try:
+        i = int(ar[0])
+        s = ar[1]
+        l = int(ar[2])
+    except ValueError:
+        continue
     id.append(i)
     source.append(s)
     length.append(l)
 
 sequence = []   
 for i, idx in enumerate(id):
-    sign = 1
+    sign = 101
     if re.match(host, source[i]):
         #print "Match found: %s" %source[i]
-	sign = -1
+	sign = -101
     #rounded_len = float(length[i])*sign
     rounded_len = max(1, int(round(float(length[i])/round_base))) 
     print "%s %s" %(length[i], rounded_len)

@@ -1,5 +1,5 @@
-pcap_dir="mon_pcap"
-tshark_dir="mon_ts"
+pcap_dir="svm_pcap"
+tshark_dir="svm_ts"
 
 files=$pcap_dir/*
 

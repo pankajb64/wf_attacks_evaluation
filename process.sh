@@ -1,5 +1,5 @@
-pcap_dir="mon_ts"
-feat_dir="mon_feat"
+pcap_dir="svm_ts"
+feat_dir="svm_feat"
 
 files=$pcap_dir/*
 
