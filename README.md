@@ -1,6 +1,6 @@
 # wf_attacks_evaluation
 
-Evaluation of the different methodologies for Machine-Learning based Website Fingerprinting Attacks on the Tor Browser. Independent Study under Prof Amir Houmansar at The Secure, Private Internet Group (SPIN), University of Massacusetts, Amherst.
+Evaluation of the different methodologies for Machine-Learning based Website Fingerprinting Attacks on the Tor Browser. Independent Study under Prof Amir Houmansadr at The Secure, Private Internet Group (SPIN), University of Massacusetts, Amherst.
 
 # References -
 
