@@ -3,3 +3,6 @@ while read -r line; do ls | grep "$line" | xargs mv -t ../mon_pcap  ; done < ../
 
 #Get list of distinct urls in crawls
 ll | tr -s ' ' | cut -d' ' -f9 | cut -d'-' -f2 | cut -d'_' -f1 | sort | uniq > ../sites
+
+#Rename all files labelled "wh.featapp.com" to "whatsapp.com"
+ll | grep wh | tr -s " " | cut -d" " -f9 | sed "h; s/wh\.feat/whats/; H; g;  s/^/mv /g; s/\n/ /g"
