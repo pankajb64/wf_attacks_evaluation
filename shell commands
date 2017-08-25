@@ -6,3 +6,15 @@ ll | tr -s ' ' | cut -d' ' -f9 | cut -d'-' -f2 | cut -d'_' -f1 | sort | uniq > .
 
 #Rename all files labelled "wh.featapp.com" to "whatsapp.com"
 ll | grep wh | tr -s " " | cut -d" " -f9 | sed "h; s/wh\.feat/whats/; H; g;  s/^/mv /g; s/\n/ /g"
+
+#Replace all the "1"s in the feat files with 101
+sed "s/^1$/101/g" -i *
+
+#Replace all the "-1"s in the feat files with -101
+sed "s/^-1$/-101/g" -i *
+
+#Make directories of the same name as the files
+ls | sed "h; s/.pkl//; H; s/^/mkdir /g" | bash -x
+
+#Move .pkl files to directories of the same name
+ls | grep ".pkl" | sed -r "h;  s/(.*)\.pkl/mv \1.pkl \1 /g; " | bash -x
